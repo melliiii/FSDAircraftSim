@@ -6,22 +6,22 @@ package de.rapshansa.packets;
  * @version 1.0
  * @see FSDPacket
  */
-public class FSDAddControllerPacket implements FSDPacket{
+public class FSDAddPilotPacket implements FSDPacket{
 
-    static final String command = "#AA";
+    static final String command = "#AP";
     private String[] params;
 
     /**
      * Creates Packet with params
-     * @param params Fields: MSG FROM, MSG TO, REAL NAME, CERTIFICATE ID, PASSWORD, RATING (num between 0 and 12), PROTOCOL REVISION LETTER
+     * @param params Fields: MSG FROM, MSG TO, CERTIFICATE ID ,PASSWORD, RATING (num between 0 and 5), PROTOCOL REVISION LETTER, SIM LETTER
      */
-    public FSDAddControllerPacket(String[] params){
+    public FSDAddPilotPacket(String[] params){
         this.params = params;
     }
 
     /**
      * Sets params for packet
-     * @param params Fields: MSG FROM, MSG TO, REAL NAME, CERTIFICATE ID, PASSWORD, RATING (num between 0 and 12), PROTOCOL REVISION LETTER
+     * @param params Fields: MSG FROM, MSG TO, CERTIFICATE ID ,PASSWORD, RATING (num between 0 and 5), PROTOCOL REVISION LETTER, SIM LETTER
      */
     @Override
     public FSDPacket setParams(String[] params) {
