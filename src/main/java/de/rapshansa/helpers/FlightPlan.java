@@ -92,6 +92,7 @@ public class FlightPlan {
     public List<String> toStringList(){
         List<String> stringList = new ArrayList<>();
         stringList.add(callsign);
+        stringList.add("SERVER");
         stringList.add(flight_type);
         stringList.add(aircraft_type);
         stringList.add(tas_cruise);

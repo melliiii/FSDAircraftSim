@@ -35,6 +35,6 @@ public class FSDRemovePilot implements FSDPacket{
      */
     @Override
     public String asString() {
-        return command + params[0];
+        return command + params[0] + ":" + params[1] + "\r\n";
     }
 }
